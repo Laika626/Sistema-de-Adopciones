@@ -32,9 +32,14 @@ class Mascota {
 			edadMeses = auxEdadMeses;
 
 			std::string auxSize;
-			std::cout << "Dame el tamaño de la Mascota (xs, s, m, l, xl, xxl): ";
-			std::cin >> auxSize;
-			size = auxSize;
+			do
+			{
+				std::cout << "Dame el tamaño de la Mascota (xs, s, m, l, xl, xxl): ";
+				std::cin >> auxSize;
+				size = auxSize;
+			}
+			while(auxSize != "xs" && auxSize != "s" && auxSize != "m" && auxSize != "xl" && auxSize != "xxl");
+			
 
 			std::string auxConviveConNinos;
 			std::cout << "La Mascota convive con niños: ";
