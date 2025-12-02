@@ -10,8 +10,60 @@ class Mascota {
 		std::string size;
 		bool conviveConNinos;
 		bool conviveConOtrasMascotas;
+		bool adoptado;
 
 	public:
+		Mascota(){
+			std::string auxNombre;
+			std::cout << "Dame el nombre de la Mascota: ";
+			std::cin >> auxNombre;
+			nombre = auxNombre;
+
+			std::string auxSexo;
+			std::cout << "Dame el sexo de la Mascota: ";
+			std::cin >> auxSexo;
+			sexo = auxSexo;
+
+			std::string auxTipoMascota;
+			std::cout << "Dame el tipo de la Mascota: ";
+			std::cin >> auxTipoMascota;
+			tipoMascota = auxTipoMascota;
+
+			int auxEdadMeses;
+			std::cout << "Dame la edad de la Mascota en meses: ";
+			std::cin >> auxEdadMeses;
+			edadMeses = auxEdadMeses;
+
+			std::string auxSize;
+			std::cout << "Dame el tamaño de la Mascota (xs, s, m, l, xl, xxl: ";
+			std::cin >> auxSize;
+			size = auxSize;
+
+			std::string auxConviveConNinos;
+			std::cout << "La Mascota convive con niños: ";
+			std::cin >> auxConviveConNinos;
+			if (auxConviveConNinos == "si")
+			{
+				conviveConNinos = true;
+			}
+			else {
+				conviveConNinos = false;
+			}
+
+			std::string auxConviveConOtrasMascotas;
+			std::cout << "La Mascota convive con otros animales: ";
+			std::cin >> auxConviveConOtrasMascotas;
+			if (auxConviveConOtrasMascotas == "si")
+			{
+				conviveConOtrasMascotas = true;
+			}
+			else {
+				conviveConOtrasMascotas = false;
+			}
+
+			adoptado = false;
+
+		}
 		std::string getNombre() {
 			return nombre;
 		}
@@ -67,7 +119,33 @@ class Mascota {
 		void setConviveConOtrasMascotas(bool newConviveConOtrasMascotas) {
 			conviveConOtrasMascotas = newConviveConOtrasMascotas;
 		}
+		void menuModificacionMascota(){
+            int opcionMascota;
+            std::cout << "Que quieres modificar?" << std::endl;
+            std::cout << "1) Nombre" << std::endl;
+            std::cout << "2) Edad" << std::endl;
+            std::cin >> opcionMascota;
 
+            switch (opcionMascota)
+            {
+            case 1:
+            {
+                std::cout << "Nuevo Nombre: ";
+                std::string nuevoNombre;
+                std::cin >> nuevoNombre;
+                setNombre(nuevoNombre);
+                break;
+            }
+        case 2:
+            {
+                std::cout << "Nueva Edad: ";
+                std::string nuevaEdad;
+                std::cin >> nuevaEdad;
+                setNombre(nuevaEdad);
+                break;
+            }
+        	}
+        }
 };
 
 class Persona {
@@ -153,6 +231,54 @@ class Rescatista : public Persona {
 		void setCuotaRecuperacion(double newCuotaRecuperacion){
 			cuotaRecuperacion = newCuotaRecuperacion;
 		}
+
+        void menuModificacionRescatista(){
+            int opcionRescatista;
+            std::cout << "Que quieres modificar?" << std::endl;
+            std::cout << "1) Telefono" << std::endl;
+            std::cout << "2) Correo Electronico" << std::endl;
+            std::cout << "3) Direccion" << std::endl;
+            std::cout << "4) Cuota de recuperacion" << std::endl;
+            std::cin >> opcionRescatista;
+
+            switch (opcionRescatista)
+            {
+            case 1:
+            {
+                std::cout << "Nuevo Telefono: ";
+                std::string nuevoTelefono;
+                std::cin >> nuevoTelefono;
+                setTelefono(nuevoTelefono);
+                break;
+            }
+            case 2:
+            {
+                std::cout << "Correo Electronico: ";
+                std::string nuevoCorreo;
+                std::cin >> nuevoCorreo;
+                setCorreoElectronico(nuevoCorreo);
+                break;
+            }
+            case 3:
+            {
+                std::cout << "Direccion: ";
+                std::string nuevaDireccion;
+                std::cin >> nuevaDireccion;
+                setDireccion(nuevaDireccion);
+                break;
+            }
+            case 4:
+            {
+                std::cout << "Cuota de recuperacion: ";
+                double nuevaCuota;
+                std::cin >> nuevaCuota;
+                setCuotaRecuperacion(nuevaCuota);
+                break;
+            }
+            default:
+                break;
+            }
+        }
 };
 
 class Adoptante : public Persona {
@@ -161,6 +287,17 @@ class Adoptante : public Persona {
 		std::string tipoVivienda;
 
 	public:
+		Adoptante(){
+			std::string auxOcupacion;
+			std::cout << "Dame la ocupación de la persona: ";
+			std::cin >> auxOcupacion;
+			ocupacion = auxOcupacion;
+
+			std::string auxTipoVivienda;
+			std::cout << "Dame el tipo de vivienda de la persona: ";
+			std::cin >> auxTipoVivienda;
+			tipoVivienda = auxTipoVivienda;
+		}
 		std::string getOcupacion(){
 			return ocupacion;
 		}
@@ -188,6 +325,38 @@ class EstudioAdopcion {
 		 std::string actividadFisica;
 
 	public:
+		EstudioAdopcion(){
+			std::string auxFecha;
+			std::cout << "Fecha: ";
+			std::cin >> auxFecha;
+			fecha = auxFecha;
+
+			std::string auxLugar;
+			std::cout << "Lugar de la adopcion: ";
+			std::cin >> auxLugar;
+			lugar = auxLugar;
+
+			int auxHijos;
+			std::cout << "Cantidad de hijos de los adoptantes: ";
+			std::cin >> auxHijos;
+			hijos = auxHijos;
+
+			int auxMascotasExistentes;
+			std::cout << "Cantidad de mascotas que tienen los adoptantes: ";
+			std::cin >> auxMascotasExistentes;
+			mascotasExistentes = auxMascotasExistentes;
+
+			int auxTiempoParaMascotas;
+			std::cout << "Cantidad de tiempo que se le dedicara a la mascota: ";
+			std::cin >> auxTiempoParaMascotas;
+			tiempoParaMascota = auxTiempoParaMascotas;
+
+			std::string auxActividadFisica;
+			std::cout << "Nivel de actividad fisica de la persona (B, M, A): ";
+			std::cin >> auxActividadFisica;
+			actividadFisica = auxActividadFisica;
+		}
+
 		std::string getFecha() {
 			return fecha;
 		} 
@@ -231,6 +400,7 @@ class EstudioAdopcion {
 int main() {
 	int opcion = -1;
 	std::vector<Rescatista> rescatistas;
+	std::vector<Mascota> mascotas;
 
 	do
 	{
@@ -238,6 +408,15 @@ int main() {
 		{
 			std::cout << "1) Dar de alta Rescatista" << std::endl;
 			std::cout << "2) Listar Rescatistas" << std::endl;
+            std::cout << "3) Modificar Rescatistas" << std::endl;
+            std::cout << "4) Dar de alta Mascota" << std::endl;
+            std::cout << "5) Listar Mascotas" << std::endl;
+            std::cout << "6) Modificar Mascota" << std::endl;
+            std::cout << "7) Dar de alta adoptante" << std::endl;
+            std::cout << "8) Modificar Adoptante" << std::endl;
+            std::cout << "9) Listar Adoptantes" << std::endl;
+            std::cout << "10) Iniciar Estudio de Adopcion" << std::endl;
+            std::cout << "11) Dar Mascota en Adopcion" << std::endl;
 			std::cout << "20) Salir" << std::endl;
 			std::cin >> opcion;
 		} while (opcion < 1 || opcion > 20);
@@ -251,7 +430,7 @@ int main() {
 			break;
 		}
 		case 2:
-		{
+        {
 			std::cout << "Seleccionaste opcion 2" << std::endl;
 			for(int i = 0; i < rescatistas.size(); i++){
 				std::cout << rescatistas[i].getNombre() << std::endl;
@@ -259,6 +438,45 @@ int main() {
 			}
 			break;
 		}
+        case 3:
+        {
+            std::cout << "Que rescatista quieres modificar" << std::endl;
+
+            for(int i = 0; i < rescatistas.size(); i++){
+                std::cout << i << rescatistas[i].getNombre() << std::endl;
+            }
+            int rescatistaElegido;
+            std::cin >> rescatistaElegido;
+
+            rescatistas[rescatistaElegido].menuModificacionRescatista();
+        }
+        case 4:
+        {
+            Mascota auxMascota = Mascota();
+			mascotas.push_back(auxMascota);
+			break;
+        }
+    	case 5:
+    	{
+    		std::cout << "Seleccionaste opcion 5" << std::endl;
+			for(int i = 0; i < mascotas.size(); i++){
+				std::cout << mascotas[i].getNombre() << std::endl;
+				std::cout << mascotas[i].getEdadMeses() << std::endl;
+			}
+			break;
+    	}
+    	case 6:
+    	{
+    		std::cout << "A cual mascota quieres modificar" << std::endl;
+
+            for(int i = 0; i < mascotas.size(); i++){
+                std::cout << i << mascotas[i].getNombre() << std::endl;
+            }
+            int mascotaElegida;
+            std::cin >> mascotaElegida;
+
+            mascotas[mascotaElegida].menuModificacionMascota();
+    	}
 		case 20:
 			break;
 		default:
