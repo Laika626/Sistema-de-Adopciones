@@ -163,4 +163,51 @@ class Adoptante : public Persona {
 		void setTipoVivienda(std::string newTipoVivienda){
 			tipoVivienda = newTipoVivienda;
 		}
+		void menuModificacionAdoptante(){
+            int opcionAdoptante;
+            std::cout << "Que quieres modificar?" << std::endl;
+            std::cout << "1) Telefono" << std::endl;
+            std::cout << "2) Correo Electronico" << std::endl;
+            std::cout << "3) Direccion" << std::endl;
+            std::cout << "4) Ocupacion" << std::endl;
+            std::cin >> opcionAdoptante;
+
+            switch (opcionAdoptante)
+            {
+            case 1:
+            {
+                std::cout << "Nuevo Telefono: ";
+                std::string nuevoTelefono;
+                std::cin >> nuevoTelefono;
+                setTelefono(nuevoTelefono);
+                break;
+            }
+            case 2:
+            {
+                std::cout << "Correo Electronico: ";
+                std::string nuevoCorreo;
+                std::cin >> nuevoCorreo;
+                setCorreoElectronico(nuevoCorreo);
+                break;
+            }
+            case 3:
+            {
+                std::cout << "Direccion: ";
+                std::string nuevaDireccion;
+                std::cin >> nuevaDireccion;
+                setDireccion(nuevaDireccion);
+                break;
+            }
+            case 4:
+            {
+                std::cout << "Ocupacion: ";
+                std::string nuevaOcupacion;
+                std::cin >> nuevaOcupacion;
+                setOcupacion(nuevaOcupacion);
+                break;
+            }
+            default:
+                break;
+            }
+        }
 };
