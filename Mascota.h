@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+
 class Mascota {
 	private:
 		std::string nombre;
@@ -42,27 +45,34 @@ class Mascota {
 			
 
 			std::string auxConviveConNinos;
-			std::cout << "La Mascota convive con niños: ";
-			std::cin >> auxConviveConNinos;
-			if (auxConviveConNinos == "si")
-			{
-				conviveConNinos = true;
+			do{
+				std::cout << "La Mascota convive con niños: ";
+				std::cin >> auxConviveConNinos;
+				if (auxConviveConNinos == "si")
+				{
+					conviveConNinos = true;
+				}
+				else {
+					conviveConNinos = false;
+				}
 			}
-			else {
-				conviveConNinos = false;
-			}
+			while(auxConviveConNinos != "si" && auxConviveConNinos != "no");
+			
 
 			std::string auxConviveConOtrasMascotas;
-			std::cout << "La Mascota convive con otros animales: ";
-			std::cin >> auxConviveConOtrasMascotas;
-			if (auxConviveConOtrasMascotas == "si")
-			{
+			do{
+				std::cout << "La Mascota convive con otros animales: ";
+				std::cin >> auxConviveConOtrasMascotas;
+				if (auxConviveConOtrasMascotas == "si")
+				{
 				conviveConOtrasMascotas = true;
+				}
+				else {
+					conviveConOtrasMascotas = false;
+				}
 			}
-			else {
-				conviveConOtrasMascotas = false;
-			}
-
+			while(auxConviveConOtrasMascotas != "si" && auxConviveConOtrasMascotas != "no");
+			
 			adoptado = false;
 
 		}

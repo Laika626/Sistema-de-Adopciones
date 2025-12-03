@@ -1,9 +1,12 @@
-#include <iostream>
-#include <string>
+#include "CentroAdopcion.h"
 #include "Mascota.h"
 #include "Persona.h"
-#include "CentroAdopcion.h"
+#include "rescatista.h"
+#include "adoptante.h"
+#include "adopcion.h"
 #include "utils.h"
+#include <iostream>
+#include <vector>
 
 int main() {
 	int opcion = -1;
@@ -26,8 +29,8 @@ int main() {
             std::cout << "7) Dar de alta adoptante" << std::endl;
             std::cout << "8) Listar Adoptante" << std::endl;
             std::cout << "9) Modificar Adoptantes" << std::endl;
-            std::cout << "10) Iniciar Estudio de Adopcion" << std::endl;
-            std::cout << "11) Dar Mascota en Adopcion" << std::endl;
+            std::cout << "10) Llenar aplicacion de adopcion" << std::endl;
+            std::cout << "11) Modificar aplicacion de adopcion" << std::endl;
 			std::cout << "20) Salir" << std::endl;
 			std::cout << "Selecciona una opcion: ";
 			std::cin >> opcion;
@@ -126,10 +129,37 @@ int main() {
             }
             int adoptanteElegido;
             std::cin >> adoptanteElegido;
-
             adoptantes[adoptanteElegido].menuModificacionAdoptante();
             esperar();
             break;
+    	}
+    case 10:
+    	{
+    		std::cout << "Que adoptante llenara la aplicacion de adopcion: " << std::endl;
+    		for(int i = 0; i < adoptantes.size(); i++){
+                std::cout << i << adoptantes[i].getNombre() << std::endl;
+			}
+			int adoptanteElegido;
+            std::cin >> adoptanteElegido;
+
+            std::cout << "Para que mascota se quiere llenar4 la aplicacion: " << std::endl;
+    		for(int i = 0; i < mascotas.size(); i++){
+                std::cout << i << mascotas[i].getNombre() << std::endl;
+			}
+			int mascotaElegida;
+            std::cin >> mascotaElegida;
+
+            std::cout << "Que rescatista hara la adopcion: " << std::endl;
+    		for(int i = 0; i < rescatistas.size(); i++){
+                std::cout << i << rescatistas[i].getNombre() << std::endl;
+			}
+			int rescatistaElegido;
+            std::cin >> rescatistaElegido;
+
+            Adopcion auxAdopcion = Adopcion(&adoptantes[adoptanteElegido], &mascotas[mascotaElegida], &rescatistas[rescatistaElegido]);
+
+			esperar();
+			break;
     	}
 		case 20:
 			break;
