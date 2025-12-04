@@ -1,10 +1,11 @@
 /*
  * Clase Rescatista contiene los atributos y métodos genéricos para el manejo de adoptantes.
  */
+#ifndef RESCATISTA_H_
+#define RESCATISTA_H_
 #include <iostream>
 #include <string>
 #include "Persona.h"
-#define Rescatista
 
 //Declaracion de clase Rescatista la cual es hija de la clase persona
 class Rescatista : public Persona {

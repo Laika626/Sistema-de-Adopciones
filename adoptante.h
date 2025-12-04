@@ -2,10 +2,11 @@
  * Clase Adoptante contiene los métodos genéricos para el manejo de adoptantes.
  */
 
+#ifndef ADOPTANTE_H_
+#define ADOPTANTE_H_
 #include <iostream>
 #include <string>
 #include "Persona.h"
-#define Adoptante
 
 //Declaracion de clase Adoptante la cual es hija de la clase persona
 class Adoptante : public Persona {

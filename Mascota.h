@@ -1,9 +1,10 @@
 /*
  * Clase Mascota contiene los atributos y métodos genéricos para el manejo de mascotas.
  */
+#ifndef MASCOTA_H_
+#define MASCOTA_H_
 #include <iostream>
 #include <string>
-#define Mascota
 
 //Declaracion de clase Mascota
 class Mascota {

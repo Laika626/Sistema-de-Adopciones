@@ -2,9 +2,11 @@
  * Clase persona contiene los atributos y métodos genéricos para el manejo de personas.
  * Clase que contiene 2 hijas, adoptante y rescatista
  */
+#ifndef PERSONA_H_
+#define PERSONA_H_
 #include <iostream>
 #include <string>
-#define Persona
+
 
 //Declaracion de clase Persona
 class Persona {
