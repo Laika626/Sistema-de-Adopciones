@@ -17,7 +17,7 @@ class Rescatista : public Persona {
         //Declaracion de los metodos del objeto
 		Rescatista();
 
-        double getCuotaRecuperacion()
+        double getCuotaRecuperacion();
         void setCuotaRecuperacion(double newCuotaRecuperacion);
         void menuModificacionRescatista();
         
@@ -39,7 +39,7 @@ Rescatista::Rescatista(){
  * @param que es esto
  * @return string: cuota de recuperacion del rescatista
 */
-double getCuotaRecuperacion(){
+double Rescatista::getCuotaRecuperacion(){
     return cuotaRecuperacion;
 }
 
@@ -48,7 +48,7 @@ double getCuotaRecuperacion(){
  * @param que es esto
  * @Modificacion de la cuota de recuperacion del rescatista
 */
-void setCuotaRecuperacion(double newCuotaRecuperacion){
+void Rescatista::setCuotaRecuperacion(double newCuotaRecuperacion){
     cuotaRecuperacion = newCuotaRecuperacion;
 }
 
@@ -57,7 +57,7 @@ void setCuotaRecuperacion(double newCuotaRecuperacion){
  * @param
  * @Modificacion de los atributos a eleccion del usuario
 */
-void menuModificacionRescatista(){
+void Rescatista::menuModificacionRescatista(){
     int opcionRescatista;
     std::cout << "Que quieres modificar?" << std::endl;
     std::cout << "1) Telefono" << std::endl;

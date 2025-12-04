@@ -111,7 +111,7 @@ Mascota::Mascota(){
  * @param que es esto
  * @return string: nombre
 */
-std::string getNombre() {
+std::string Mascota::getNombre() {
 	return nombre;
 }
 
@@ -120,7 +120,7 @@ std::string getNombre() {
  * @param que es esto
  * @return string: sexo
 */
-std::string getSexo() {
+std::string Mascota::getSexo() {
 	return sexo;
 }
 
@@ -129,7 +129,7 @@ std::string getSexo() {
  * @param que es esto
  * @return string: tipo de mascota
 */
-std::string getTipoMascota() {
+std::string Mascota::getTipoMascota() {
 	return tipoMascota;
 }
 
@@ -138,7 +138,7 @@ std::string getTipoMascota() {
  * @param que es esto
  * @return string: edad en meses
 */
-int getEdadMeses() {
+int Mascota::getEdadMeses() {
 	return edadMeses;
 }
 
@@ -147,7 +147,7 @@ int getEdadMeses() {
  * @param que es esto
  * @return string: size
 */
-std::string getSize() {
+std::string Mascota::getSize() {
 	return size;
 }
 
@@ -156,7 +156,7 @@ std::string getSize() {
  * @param que es esto
  * @return string: convivencia con ninos
 */
-bool getConviveConNinos() {
+bool Mascota::getConviveConNinos() {
 	return conviveConNinos;
 }
 
@@ -165,7 +165,7 @@ bool getConviveConNinos() {
  * @param que es esto
  * @return string: convivencia con otras mascotas
 */
-bool getConviveConOtrasMascotas() {
+bool Mascota::getConviveConOtrasMascotas() {
 	return conviveConOtrasMascotas;
 }
 
@@ -174,7 +174,7 @@ bool getConviveConOtrasMascotas() {
  * @param que es esto
  * @Modificacion del nombre
 */
-void setNombre(std::string newName) {
+void Mascota::setNombre(std::string newName) {
 	nombre = newName;
 }
 
@@ -183,7 +183,7 @@ void setNombre(std::string newName) {
  * @param que es esto
  * @Modificacion del sexo
 */
-void setSexo(std::string newSexo) {
+void Mascota::setSexo(std::string newSexo) {
 	sexo = newSexo;
 }
 
@@ -192,7 +192,7 @@ void setSexo(std::string newSexo) {
  * @param que es esto
  * @Modificacion del tipo de mascota
 */
-void setTipoMascota(std::string newTipoMascota) {
+void Mascota::setTipoMascota(std::string newTipoMascota) {
 	tipoMascota = newTipoMascota;
 }
 
@@ -201,7 +201,7 @@ void setTipoMascota(std::string newTipoMascota) {
  * @param que es esto
  * @Modificacion de edad en meses
 */
-void setEdadMeses(int newEdadMeses) {
+void Mascota::setEdadMeses(int newEdadMeses) {
 	edadMeses = newEdadMeses;
 }
 
@@ -210,7 +210,7 @@ void setEdadMeses(int newEdadMeses) {
  * @param que es esto
  * @Modificacion de size
 */
-void setSize(int newSize) {
+void Mascota::setSize(int newSize) {
 	size = newSize;
 }
 
@@ -219,7 +219,7 @@ void setSize(int newSize) {
  * @param que es esto
  * @Modificacion de convivencia con ninos
 */
-void setConviveConNinos(bool newConviveConNinos) {
+void Mascota::setConviveConNinos(bool newConviveConNinos) {
 	conviveConNinos = newConviveConNinos;
 }
 
@@ -228,7 +228,7 @@ void setConviveConNinos(bool newConviveConNinos) {
  * @param que es esto
  * @Modificacion de convivencia con otras mascotas
 */
-void setConviveConOtrasMascotas(bool newConviveConOtrasMascotas) {
+void Mascota::setConviveConOtrasMascotas(bool newConviveConOtrasMascotas) {
 	conviveConOtrasMascotas = newConviveConOtrasMascotas;
 }
 
@@ -237,7 +237,7 @@ void setConviveConOtrasMascotas(bool newConviveConOtrasMascotas) {
  * @param
  * @Modificacion de los atributos a eleccion del usuario
 */
-void menuModificacionMascota(){
+void Mascota::menuModificacionMascota(){
     int opcionMascota;
     std::cout << "Que quieres modificar?" << std::endl;
     std::cout << "1) Nombre" << std::endl;

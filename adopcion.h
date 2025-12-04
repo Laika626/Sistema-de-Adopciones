@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
-#include <Personas.h>
-#include <adoptante.h>
-#include <rescatista.h>
-#include <CentroAdopcion.h>
+#include "Persona.h"
+#include "adoptante.h"
+#include "rescatista.h"
+#include "CentroAdopcion.h"
 
 
 

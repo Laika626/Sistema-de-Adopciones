@@ -63,7 +63,7 @@ Persona::Persona(){
  * @param que es esto
  * @return string: nombre de persona
 */
-std::string getNombre() {
+std::string Persona::getNombre() {
 	return nombre;
 } 
 
@@ -72,7 +72,7 @@ std::string getNombre() {
  * @param que es esto
  * @return string: telefono
 */
-std::string getTelefono() {
+std::string Persona::getTelefono() {
 	return telefono;
 }
 
@@ -81,7 +81,7 @@ std::string getTelefono() {
  * @param que es esto
  * @return string: correo electronico
 */
-std::string getCorreoElectronico() {
+std::string Persona::getCorreoElectronico() {
 	return correoElectronico;
 } 
 
@@ -90,7 +90,7 @@ std::string getCorreoElectronico() {
  * @param que es esto
  * @return string: direccion
 */
-std::string getDireccion() {
+std::string Persona::getDireccion() {
 	return direccion;
 } 
 
@@ -100,7 +100,7 @@ std::string getDireccion() {
  * @modificacion del nombre
  * Tal vez quitar
 */
-void setNombre(std::string newName) {
+void Persona::setNombre(std::string newName) {
 	nombre = newName;
 } 
 
@@ -109,7 +109,7 @@ void setNombre(std::string newName) {
  * @param que es esto
  * @Modificacion del telefono
 */
-void setTelefono(std::string newTelefono) {
+void Persona::setTelefono(std::string newTelefono) {
 	telefono = newTelefono;
 } 
 
@@ -118,7 +118,7 @@ void setTelefono(std::string newTelefono) {
  * @param que es esto
  * @modificacion del correo electronico
 */
-void setCorreoElectronico(std::string newCorreoElectronico) {
+void Persona::setCorreoElectronico(std::string newCorreoElectronico) {
 	correoElectronico = newCorreoElectronico;
 } 
 
@@ -127,7 +127,7 @@ void setCorreoElectronico(std::string newCorreoElectronico) {
  * @param que es esto
  * @Modificacion del adoptante
 */
-void setDireccion(std::string newDireccion) {
+void Persona::setDireccion(std::string newDireccion) {
 	direccion = newDireccion;
 } 
 

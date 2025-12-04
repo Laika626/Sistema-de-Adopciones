@@ -21,7 +21,6 @@ class Adoptante : public Persona {
 		Adoptante();
 
         std::string getOcupacion();
-        std::string getOcupacion();
         std::string getTipoVivienda();
         void setOcupacion(std::string newOcupacion);
         void setTipoVivienda(std::string newTipoVivienda);
@@ -51,7 +50,7 @@ Adoptante::Adoptante(){
  * @param que es esto
  * @return string: ocupacion del adoptante
 */
-std::string getOcupacion(){
+std::string Adoptante::getOcupacion(){
     return ocupacion;
 }
 
@@ -60,7 +59,7 @@ std::string getOcupacion(){
  * @param
  * @return string: tipo de vivienda en la cual vive el adoptante
 */
-std::string getTipoVivienda(){
+std::string Adoptante::getTipoVivienda(){
     return tipoVivienda;
 }
 
@@ -69,7 +68,7 @@ std::string getTipoVivienda(){
  * @param
  * @Cambia el el string ocupacion 
 */
-void setOcupacion(std::string newOcupacion){
+void Adoptante::setOcupacion(std::string newOcupacion){
     ocupacion = newOcupacion;
 }
 
@@ -78,7 +77,7 @@ void setOcupacion(std::string newOcupacion){
  * @param
  * @Cambia el string de tipo de vivienda
 */
-void setTipoVivienda(std::string newTipoVivienda){
+void Adoptante::setTipoVivienda(std::string newTipoVivienda){
     tipoVivienda = newTipoVivienda;
 }
 
@@ -87,7 +86,7 @@ void setTipoVivienda(std::string newTipoVivienda){
  * @param
  * @Modificacion de los atributos a eleccion del usuario
 */
-void menuModificacionAdoptante(){
+void Adoptante::menuModificacionAdoptante(){
     int opcionAdoptante;
     std::cout << "Que quieres modificar?" << std::endl;
     std::cout << "1) Telefono" << std::endl;

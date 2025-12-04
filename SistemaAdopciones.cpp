@@ -1,4 +1,3 @@
-#include "CentroAdopcion.h"
 #include "Mascota.h"
 #include "Persona.h"
 #include "rescatista.h"
