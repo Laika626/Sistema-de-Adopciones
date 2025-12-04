@@ -114,16 +114,6 @@ Los vectores funcionan como la base para que el sistema pueda crecer conforme se
 
 ---
 
-## Diagrama UML
-
-Inserte aquí la imagen correspondiente al UML del proyecto:
-
-```
-![UML](UML.png)
-```
-
----
-
 ## Instalación y ejecución
 
 Para compilar el proyecto:
