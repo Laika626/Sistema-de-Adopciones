@@ -34,7 +34,7 @@ class Persona {
 
 /**
  * Constructor por default
- * @return Objeto Persona
+ * @return Objeto persona
  */
 Persona::Persona(){
 	std::string auxNombre;

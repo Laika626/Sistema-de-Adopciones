@@ -41,7 +41,7 @@ class Mascota {
 
 /**
  * Constructor por default
- * @return Objeto Mascota
+ * @return Objeto mascota
  */
 Mascota::Mascota(){
 	std::string auxNombre;

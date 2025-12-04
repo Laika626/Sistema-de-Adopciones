@@ -8,8 +8,10 @@
 #include <iostream>
 #include <string>
 
+//Declaracion de clase EstudioAdopcion
 class EstudioAdopcion {
 	private:
+		 //Declaracion de atributos del objeto
 		 std::string fecha;
 		 std::string lugar;
 		 int hijos;
@@ -18,6 +20,7 @@ class EstudioAdopcion {
 		 std::string actividadFisica;
 
 	public:
+		 //Declaracion de metodos del objeto
 		EstudioAdopcion();
 		std::string getFecha();
 		std::string getLugar();
@@ -34,6 +37,10 @@ class EstudioAdopcion {
 
 };
 
+/**
+ * Constructor por default
+ * @return Objeto estudioAdopcion
+ */
 EstudioAdopcion::EstudioAdopcion(){
 	std::string auxFecha;
 	std::cout << "Fecha: ";
@@ -66,50 +73,110 @@ EstudioAdopcion::EstudioAdopcion(){
 	actividadFisica = auxActividadFisica;
 }
 
+/**
+ * getter fecha
+ * @param que es esto
+ * @return string: fecha
+*/
 std::string EstudioAdopcion::getFecha() {
 	return fecha;
 } 
 
+/**
+ * getter lugar
+ * @param que es esto
+ * @return string: lugar
+*/
 std::string EstudioAdopcion::getLugar() {
 	return lugar;
 }
 
+/**
+ * getter hijos
+ * @param que es esto
+ * @return int: hijos
+*/
 int EstudioAdopcion::getHijos () {
 	return hijos;
 }
 
+/**
+ * getter MascotasExistentes
+ * @param que es esto
+ * @return int: MascotasExistentes
+*/
 int EstudioAdopcion::getMascotasExistentes() {
 	return mascotasExistentes;
 }
-		
+
+/**
+ * getter TiempoParaMascota
+ * @param que es esto
+ * @return int: tiempoParaMascota
+*/		
 int EstudioAdopcion::getTiempoParaMascota() {
 	return tiempoParaMascota;
 }
-		
+
+/**
+ * getter ActividadFisica
+ * @param que es esto
+ * @return string: actividadFisisca
+*/		
 std::string EstudioAdopcion::getActividadFisica() {
 	return actividadFisica;
 } 
 
+/**
+ * setter fecha
+ * @param que es esto
+ * @Modificacion string: fecha
+*/
 void EstudioAdopcion::setFecha(std::string newFecha) {
 	fecha = newFecha;
 } 
 
+/**
+ * setter lugar
+ * @param que es esto
+ * @Modificacion string: lugar
+*/
 void EstudioAdopcion::setLugar(std::string newLugar) {
 	lugar = newLugar;
 } 
-		
+
+/**
+ * setter hijos
+ * @param que es esto
+ * @Modificacion int: hijos
+*/		
 void EstudioAdopcion::setHijos(int newHijos) {
 	hijos = newHijos;
 } 
 
+/**
+ * setter MascotasExistentes
+ * @param que es esto
+ * @Modificacion int: fecha
+*/
 void EstudioAdopcion::setMascotasExistentes(int newMascotasExistentes) {
 	mascotasExistentes = newMascotasExistentes;
 } 
-		
+
+/**
+ * setter TiempoParaMascotas
+ * @param que es esto
+ * @Modificacion int: TiempoParaMascotas
+*/		
 void EstudioAdopcion::setTiempoParaMascotas(int newTiempoParaMascotas) {
 	tiempoParaMascota = newTiempoParaMascotas;
 } 
-		
+
+/**
+ * setter ActividadFisica
+ * @param que es esto
+ * @Modificacion string: ActividadFisica
+*/		
 void EstudioAdopcion::setActividadFisica(std::string newActividadFisica) {
 	actividadFisica = newActividadFisica;
 } 

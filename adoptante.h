@@ -30,7 +30,7 @@ class Adoptante : public Persona {
 
 /**
  * Constructor por default
- * @return Objeto Adoptante
+ * @return Objeto adoptante
  */
 Adoptante::Adoptante(){
 

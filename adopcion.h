@@ -11,9 +11,10 @@
 #include "CentroAdopcion.h"
 
 
-
+//Declaracion de clase Adopcion
 class Adopcion {
 	private:
+	//Declaracion de atributos del objeto
 	std::string status;
 	Adoptante *adoptante;
 	Mascota *mascota;
@@ -21,6 +22,7 @@ class Adopcion {
 	EstudioAdopcion estudioAdopcion;
 
 	public:
+		 //Declaracion de metodos del objeto
 		Adopcion(Adoptante *auxAdoptante, Mascota *auxMascota, Rescatista *auxRescatista);
 		std::string getStatus();
 		void setStatus(std::string newStatus);
@@ -29,6 +31,10 @@ class Adopcion {
 	
 };
 
+/**
+ * Constructor por default
+ * @return Objeto adopcion
+ */
 Adopcion::Adopcion(Adoptante *auxAdoptante, Mascota *auxMascota, Rescatista *auxRescatista){
 	adoptante = auxAdoptante;
 	mascota = auxMascota;
@@ -41,17 +47,28 @@ Adopcion::Adopcion(Adoptante *auxAdoptante, Mascota *auxMascota, Rescatista *aux
 	status = auxStatus;
 }
 
-
+/**
+ * getter status
+ * @param que es esto
+ * @return string: status
+*/
 std::string Adopcion::getStatus() {
 	return status;
 } 
 
-
+/**
+ * setter status
+ * @param que es esto
+ * @Modificacion string: status
+*/
 void Adopcion::setStatus(std::string newStatus) {
 	status = newStatus;
 } 
 
-
+/**
+ * Funcion que imprime los datos necesarios del Estudio de adopciones
+ * @imprimer strings
+*/
 void Adopcion::imprimirAdopcionLight(){
 	std::cout << "Mascota: " << mascota->getNombre() << std::endl;
 	std::cout << "Adoptante: " << adoptante->getNombre() << std::endl;
@@ -59,7 +76,10 @@ void Adopcion::imprimirAdopcionLight(){
 	std::cout << "Status: " << status << std::endl;
 }
 
-
+/**
+ * Funcion que modifica el status de adopcion de una mascota
+ * @Modificacion string: status
+*/
 void Adopcion::modificacionStatusAdopcion(){
 	std::cout << "Nuevo Status de adopcion: ";
     std::string nuevoStatus;

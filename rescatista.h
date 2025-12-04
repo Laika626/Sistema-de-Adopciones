@@ -25,7 +25,7 @@ class Rescatista : public Persona {
 
 /**
  * Constructor por default
- * @return Objeto Rescatista
+ * @return Objeto rescatista
  */
 Rescatista::Rescatista(){
     double auxCuotaDeRecuperacion;
