@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 
 void clearScreen() {
 #ifdef _WIN32 // Check if the operating system is Windows

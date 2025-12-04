@@ -1,5 +1,11 @@
 #include <iostream>
 #include <string>
+#include <Personas.h>
+#include <adoptante.h>
+#include <rescatista.h>
+#include <CentroAdopcion.h>
+
+
 
 class Adopcion {
 	private:
