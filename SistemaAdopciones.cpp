@@ -12,6 +12,7 @@ int main() {
 	std::vector<Rescatista> rescatistas;
 	std::vector<Mascota> mascotas;
 	std::vector<Adoptante> adoptantes;
+	std::vector<Adopcion> adopciones;
 
 	do
 	{
@@ -29,7 +30,8 @@ int main() {
             std::cout << "8) Listar Adoptante" << std::endl;
             std::cout << "9) Modificar Adoptantes" << std::endl;
             std::cout << "10) Llenar aplicacion de adopcion" << std::endl;
-            std::cout << "11) Modificar aplicacion de adopcion" << std::endl;
+            std::cout << "11) Listar aplicaciones de adopcion" << std::endl;
+            std::cout << "11) Modificar status de adopcion" << std::endl;
 			std::cout << "20) Salir" << std::endl;
 			std::cout << "Selecciona una opcion: ";
 			std::cin >> opcion;
@@ -156,9 +158,35 @@ int main() {
             std::cin >> rescatistaElegido;
 
             Adopcion auxAdopcion = Adopcion(&adoptantes[adoptanteElegido], &mascotas[mascotaElegida], &rescatistas[rescatistaElegido]);
+            adopciones.push_back(auxAdopcion);
 
 			esperar();
 			break;
+    	}
+    	case 11:
+    	{
+    		std::cout << "Seleccionaste opcion 11" << std::endl;
+			std::cout << std::endl;
+			for(int i = 0; i < adopciones.size(); i++){
+				adopciones[i].imprimirAdopcionLight();
+			}
+			esperar();
+			break;
+    	}
+    	case 12:
+    	{
+    		std::cout << "Cual adopcion quieres modificar" << std::endl;
+
+            for(int i = 0; i < adopciones.size(); i++){
+                std::cout << i << " "; 
+                adopciones[i].imprimirAdopcionLight();
+                std::cout << std::endl;
+            }
+            int adopcionElegida;
+            std::cin >> adopcionElegida;
+            adopciones[adopcionElegida].modificacionStatusAdopcion();
+            esperar();
+            break;
     	}
 		case 20:
 			break;

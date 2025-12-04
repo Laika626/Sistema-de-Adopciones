@@ -36,5 +36,20 @@ class Adopcion {
 			status = newStatus;
 		} 
 
+
+	void imprimirAdopcionLight(){
+		std::cout << "Mascota: " << mascota->getNombre() << std::endl;
+		std::cout << "Adoptante: " << adoptante->getNombre() << std::endl;
+		std::cout << "Rescatista: " << rescatista->getNombre() << std::endl;
+		std::cout << "Status: " << status << std::endl;
+	}
+
+	void modificacionStatusAdopcion(){
+		std::cout << "Nuevo Status de adopcion: ";
+        std::string nuevoStatus;
+        std::cin >> nuevoStatus;
+        setStatus(nuevoStatus);
+    	
+	}
 	
 };
