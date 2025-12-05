@@ -8,49 +8,58 @@
 #include <string>
 #include "Persona.h"
 
-//Declaracion de clase Adoptante la cual es hija de la clase persona
+// Declaracion de clase Adoptante la cual es hija de la clase persona
 class Adoptante : public Persona {
-	private:
-        //Declaracion de atributos del objeto
-		std::string ocupacion;
-		std::string tipoVivienda;
+ private:
+    // Declaracion de atributos del objeto
+    std::string ocupacion;
+    std::string tipoVivienda;
 
-	public:
+ public:
+    // Declaro los métodos que va a tener el objeto
+    Adoptante();
+    Adoptante(
+        std::string c_nombre,
+        std::string c_telefono,
+        std::string c_correoElectronico,
+        std::string c_direccion,
+        std::string c_ocupacion,
+        std::string c_tipoVivienda);
 
-        //Declaro los métodos que va a tener el objeto
-		Adoptante();
-
-        std::string getOcupacion();
-        std::string getTipoVivienda();
-        void setOcupacion(std::string newOcupacion);
-        void setTipoVivienda(std::string newTipoVivienda);
-        void menuModificacionAdoptante();	
-		
+    std::string getOcupacion();
+    std::string getTipoVivienda();
+    void setOcupacion(std::string newOcupacion);
+    void setTipoVivienda(std::string newTipoVivienda);
+    void menuModificacionAdoptante();
 };
 
 /**
  * Constructor por default
  * @return Objeto adoptante
  */
-Adoptante::Adoptante(){
-
-    std::string auxOcupacion;
-    std::cout << "Dame la ocupación de la persona: ";
-    std::cin >> auxOcupacion;
-    ocupacion = auxOcupacion;
-
-    std::string auxTipoVivienda;
-    std::cout << "Dame el tipo de vivienda de la persona: ";
-    std::cin >> auxTipoVivienda;
-    tipoVivienda = auxTipoVivienda;
+Adoptante::Adoptante() {
 }
+
+Adoptante::Adoptante(
+            std::string c_nombre,
+            std::string c_telefono,
+            std::string c_correoElectronico,
+            std::string c_direccion,
+            std::string c_ocupacion,
+            std::string c_tipoVivienda) : Persona(
+                c_nombre,
+                c_telefono,
+                c_correoElectronico,
+                c_direccion),
+                ocupacion(c_ocupacion),
+                tipoVivienda(c_tipoVivienda) {}
 
 /**
  * getter de ocupacion del adoptante
  * @param que es esto
  * @return string: ocupacion del adoptante
 */
-std::string Adoptante::getOcupacion(){
+std::string Adoptante::getOcupacion() {
     return ocupacion;
 }
 
@@ -59,7 +68,7 @@ std::string Adoptante::getOcupacion(){
  * @param
  * @return string: tipo de vivienda en la cual vive el adoptante
 */
-std::string Adoptante::getTipoVivienda(){
+std::string Adoptante::getTipoVivienda() {
     return tipoVivienda;
 }
 
@@ -68,7 +77,7 @@ std::string Adoptante::getTipoVivienda(){
  * @param
  * @Cambia el el string ocupacion 
 */
-void Adoptante::setOcupacion(std::string newOcupacion){
+void Adoptante::setOcupacion(std::string newOcupacion) {
     ocupacion = newOcupacion;
 }
 
@@ -77,7 +86,7 @@ void Adoptante::setOcupacion(std::string newOcupacion){
  * @param
  * @Cambia el string de tipo de vivienda
 */
-void Adoptante::setTipoVivienda(std::string newTipoVivienda){
+void Adoptante::setTipoVivienda(std::string newTipoVivienda) {
     tipoVivienda = newTipoVivienda;
 }
 
@@ -86,7 +95,7 @@ void Adoptante::setTipoVivienda(std::string newTipoVivienda){
  * @param
  * @Modificacion de los atributos a eleccion del usuario
 */
-void Adoptante::menuModificacionAdoptante(){
+void Adoptante::menuModificacionAdoptante() {
     int opcionAdoptante;
     std::cout << "Que quieres modificar?" << std::endl;
     std::cout << "1) Telefono" << std::endl;
@@ -95,8 +104,7 @@ void Adoptante::menuModificacionAdoptante(){
     std::cout << "4) Ocupacion" << std::endl;
     std::cin >> opcionAdoptante;
 
-    switch (opcionAdoptante)
-        {
+    switch (opcionAdoptante) {
         case 1:
         {
             std::cout << "Nuevo Telefono: ";
@@ -129,11 +137,8 @@ void Adoptante::menuModificacionAdoptante(){
             setOcupacion(nuevaOcupacion);
             break;
         }
-        default: 
+        default:
         break;
         }
 }
 #endif
-
-
-

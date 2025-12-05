@@ -11,40 +11,44 @@
 #include "CentroAdopcion.h"
 
 
-//Declaracion de clase Adopcion
+// Declaracion de clase Adopcion
 class Adopcion {
-	private:
-	//Declaracion de atributos del objeto
-	std::string status;
-	Adoptante *adoptante;
-	Mascota *mascota;
-	Rescatista *rescatista;
-	EstudioAdopcion estudioAdopcion;
+ private:
+    // Declaracion de atributos del objeto
+    Adoptante adoptante;
+    Mascota mascota;
+    Rescatista rescatista;
+    EstudioAdopcion estudioAdopcion;
+    std::string status;
 
-	public:
-		 //Declaracion de metodos del objeto
-		Adopcion(Adoptante *auxAdoptante, Mascota *auxMascota, Rescatista *auxRescatista);
-		std::string getStatus();
-		void setStatus(std::string newStatus);
-		void imprimirAdopcionLight();
-		void modificacionStatusAdopcion();
-	
+ public:
+    // Declaracion de metodos del objeto
+    Adopcion(
+        Adoptante& auxAdoptante,
+        Mascota& auxMascota,
+        Rescatista& auxRescatista,
+        EstudioAdopcion& auxEstudio,
+        std::string auxStatus);
+    std::string getStatus();
+    void setStatus(std::string newStatus);
+    void imprimirAdopcionLight();
+    void modificacionStatusAdopcion();
 };
 
 /**
  * Constructor por default
  * @return Objeto adopcion
  */
-Adopcion::Adopcion(Adoptante *auxAdoptante, Mascota *auxMascota, Rescatista *auxRescatista){
-	adoptante = auxAdoptante;
-	mascota = auxMascota;
-	rescatista = auxRescatista;
-
-
-	std::string auxStatus;
-	std::cout << "Status(aprobada, rechasada, en proceso): ";
-	std::cin >> auxStatus;
-	status = auxStatus;
+Adopcion::Adopcion(
+    Adoptante& auxAdoptante,
+    Mascota& auxMascota,
+    Rescatista& auxRescatista,
+    EstudioAdopcion& auxEstudio,
+    std::string auxStatus) {
+    adoptante = auxAdoptante;
+    mascota = auxMascota;
+    rescatista = auxRescatista;
+    status = auxStatus;
 }
 
 /**
@@ -53,8 +57,8 @@ Adopcion::Adopcion(Adoptante *auxAdoptante, Mascota *auxMascota, Rescatista *aux
  * @return string: status
 */
 std::string Adopcion::getStatus() {
-	return status;
-} 
+    return status;
+}
 
 /**
  * setter status
@@ -62,34 +66,29 @@ std::string Adopcion::getStatus() {
  * @Modificacion string: status
 */
 void Adopcion::setStatus(std::string newStatus) {
-	status = newStatus;
-} 
+    status = newStatus;
+}
 
 /**
  * Funcion que imprime los datos necesarios del Estudio de adopciones
  * @imprimer strings
 */
-void Adopcion::imprimirAdopcionLight(){
-	std::cout << "Mascota: " << mascota->getNombre() << std::endl;
-	std::cout << "Adoptante: " << adoptante->getNombre() << std::endl;
-	std::cout << "Rescatista: " << rescatista->getNombre() << std::endl;
-	std::cout << "Status: " << status << std::endl;
+void Adopcion::imprimirAdopcionLight() {
+    std::cout << "Mascota: " << mascota.getNombre() << std::endl;
+    std::cout << "Adoptante: " << adoptante.getNombre() << std::endl;
+    std::cout << "Rescatista: " << rescatista.getNombre() << std::endl;
+    std::cout << "Status: " << status << std::endl;
 }
 
 /**
  * Funcion que modifica el status de adopcion de una mascota
  * @Modificacion string: status
 */
-void Adopcion::modificacionStatusAdopcion(){
-	std::cout << "Nuevo Status de adopcion: ";
+void Adopcion::modificacionStatusAdopcion() {
+    std::cout << "Nuevo Status de adopcion: ";
     std::string nuevoStatus;
     std::cin >> nuevoStatus;
     setStatus(nuevoStatus);
 }
 
-
-
 #endif
-
-
-
