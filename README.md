@@ -121,10 +121,4 @@ El sistema se opera mediante menús interactivos que permiten:
 * Actualizar el estado de una solicitud
 
 ---
-
-## TO DO
-
-* Pulir detalles
-* Mejorar validaciones de entrada
-* Pulir Read me
   
